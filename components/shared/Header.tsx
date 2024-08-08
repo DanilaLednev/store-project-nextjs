@@ -17,10 +17,10 @@ export const Header = ({ className }: HeaderProps) => {
 
                 {/* Left Part */}
                 <div className='flex items-center gap-4'>
-                    <Image src='/logo.png' alt='Logo' width='32' height='32'/>
+                    <Image className="rotate-[190deg]" src='/sneakers.png' alt='Logo' width='38' height='32'/>
                     <div>
-                        <h1 className='text-2xl uppercase font-black'>Dream Pizza</h1>
-                        <p className='text-sm text-gray-400 leading-3'>Tastes could not be discussed</p>
+                        <h1 className='text-2xl uppercase font-black'>Sneakers Shop</h1>
+                        <p className='text-sm text-gray-400 leading-3'>Every step leads to success</p>
                     </div>
                 </div>
 

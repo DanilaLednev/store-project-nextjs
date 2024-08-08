@@ -12,6 +12,7 @@
 .idea
 .vscode
 README-INFO.md
+.env
 
 # next.js
 /.next/
