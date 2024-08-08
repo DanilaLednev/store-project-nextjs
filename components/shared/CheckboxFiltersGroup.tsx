@@ -18,7 +18,7 @@ interface CheckboxFiltersGroupProps {
     defaultValue?: string[];
     selected?: Set<string>;
     name?: string;
-};
+}
 
 
 export const CheckboxFiltersGroup = (props: CheckboxFiltersGroupProps) => {
@@ -45,6 +45,10 @@ export const CheckboxFiltersGroup = (props: CheckboxFiltersGroupProps) => {
         setSearchValue(e.target.value);
     };
 
+    const handelShowAll = () => {
+        setShowAll((prevShowAll) => !prevShowAll);
+    }
+
     const list = showAll
         ? items.filter((item) => item.text.toLowerCase().includes(searchValue.toLowerCase()))
         : defaultItems.slice(0, limit);
@@ -64,10 +68,6 @@ export const CheckboxFiltersGroup = (props: CheckboxFiltersGroupProps) => {
               </div>
           )}
 
-          {/*<div className='mb-5'>*/}
-          {/*    <Input placeholder={searchInputPlaceholder} className='bg-gray-50 border-none'  />*/}
-          {/*</div>*/}
-
           <div className='flex flex-col gap-4 max-h-96 pr-2 overflow-auto scrollbar'>
               {list.map((item, index) => (
                   <FilterCheckbox
@@ -84,7 +84,7 @@ export const CheckboxFiltersGroup = (props: CheckboxFiltersGroupProps) => {
 
           {items.length > 0 && (
               <div className={showAll ? 'border-t-neutral-100 mt-4' : ''}>
-                  <button onClick={() => setShowAll(!showAll)} className="text-primary mt-3">
+                  <button onClick={handelShowAll} className="text-primary mt-3">
                       {showAll ? 'hide' : '+ show all'}
                   </button>
               </div>

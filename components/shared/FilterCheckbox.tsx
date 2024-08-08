@@ -22,7 +22,7 @@ export const FilterCheckbox = (props: FilterCheckboxProps) => {
     } = props;
 
     return (
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 w-fit">
             <Checkbox
                 onCheckedChange={onCheckedChange}
                 checked={checked}
@@ -32,7 +32,7 @@ export const FilterCheckbox = (props: FilterCheckboxProps) => {
             />
             <label
                 htmlFor={`checkbox-${String(name)}-${String(value)}`}
-                className="leading-none cursor-pointer flex-1">
+                className="leading-none cursor-pointer flex-1 ">
                 {text}
             </label>
             {endAdornment}
